@@ -1,4 +1,5 @@
 # Neovim Nightsky
-Neovim colorscheme
+Neovim colorscheme. Somewhere between the stars and the sky.
 
-<img width="1440" alt="Screenshot 2023-01-15 at 16 29 06" src="https://user-images.githubusercontent.com/42460975/212533297-475a0e3c-a8e9-4f32-85e2-21eabf982fc7.png">
+## Screenshots
+<img width="1440" alt="Screenshot 2023-01-15 at 17 31 24" src="https://user-images.githubusercontent.com/42460975/212535790-c0cce1aa-72bb-4c53-ad01-e05074a4b7f2.png">
