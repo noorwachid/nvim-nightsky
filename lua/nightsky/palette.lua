@@ -36,7 +36,7 @@ local M = {
     cloud = '#c1e1f1',
     blue = '#43b8ff',
     violet = '#8a8cef',
-    lily = '#a893ff',
+    lily = '#b8a3ff',
     magenta = '#b888ef',
     heliconia = '#ef4098',
 

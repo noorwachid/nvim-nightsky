@@ -16,6 +16,7 @@ local function set(new_highlights)
 
         vim.api.nvim_command('hi ' .. group .. ' ' .. attributes_command)
 
+        -- For syntax fallback in case there is no treesitter parser
         if options.aliases then
             for _, alias in pairs(options.aliases) do
                 vim.api.nvim_command('hi ' .. alias .. ' ' .. attributes_command)
@@ -94,63 +95,67 @@ highlights.editor = {
 highlights.syntax = {
     ['@text.literal'] = { fg = palette.fg },
     ['@text.reference'] = { fg = palette.fg },
-    ['@text.title'] = { fg = palette.fg },
-    ['@text.uri'] = { fg = palette.fg },
+    ['@text.title'] = { fg = palette.fg, aliases = { 'Title' } },
+    ['@text.uri'] = { fg = palette.azure },
     ['@text.underline'] = { fg = palette.fg },
-    ['@text.todo'] = { fg = palette.fg },
+    ['@text.todo'] = { fg = palette.fg, aliases = { 'Todo' } },
 
-    ['@comment'] = { fg = palette.fg_4, fmt = 'italic' },
+    ['@error'] = { fg = palette.fg, aliases = { 'Error' } },
+    ['@comment'] = { fg = palette.fg_4, fmt = 'italic', aliases = { 'Comment', 'SpecialComment' } },
     ['@annotation'] = { fg = palette.fg_2 },
     ['@attribute'] = { fg = palette.fg_2 },
 
     ['@punctuation'] = { fg = palette.fg },
-    ['@constant'] = { fg = palette.fg },
+    ['@constant'] = { fg = palette.lily, aliases = { 'Constant' } },
     ['@constant.builtin'] = { fg = palette.fg },
     ['@constant.macro'] = { fg = palette.fg },
 
-    ['@define'] = { fg = palette.fg_2 },
-    ['@macro'] = { fg = palette.fg_2 },
-    ['@include'] = { fg = palette.fg_2 },
-    ['@preproc'] = { fg = palette.fg_2 },
+    ['@define'] = { fg = palette.fg_2, aliases = { 'Define' } },
+    ['@macro'] = { fg = palette.fg_2, aliases = { 'Macro' } },
+    ['@include'] = { fg = palette.fg_2, aliases = { 'Include' } },
+    ['@preproc'] = { fg = palette.fg_2, aliases = { 'PreProc', 'PreCondit' } },
     ['@debug'] = { fg = palette.fg_2 },
 
-    ['@string'] = { fg = palette.brown },
+    ['@string'] = { fg = palette.brown, aliases = { 'String' } },
     ['@string.escape'] = { fg = palette.yellow },
-    ['@string.special'] = { fg = palette.orange },
-    ['@character'] = { fg = palette.yellow },
-    ['@character.special'] = { fg = palette.red },
-    ['@boolean'] = { fg = palette.violet },
-    ['@number'] = { fg = palette.lily },
-    ['@float'] = { fg = palette.lily },
+    ['@string.special'] = { fg = palette.orange, aliases = { 'Special' }  },
+    ['@character'] = { fg = palette.yellow, aliases = { 'Character' } },
+    ['@character.special'] = { fg = palette.red, aliases = { 'SpecialChar'} },
+    ['@boolean'] = { fg = palette.violet, aliases = { 'Boolean' } },
+    ['@number'] = { fg = palette.lily, aliases = { 'Number' } },
+    ['@float'] = { fg = palette.lily, aliases = { 'Float' } },
 
-    ['@variable'] = { fg = palette.fg },
+    ['@variable'] = { fg = palette.fg, aliases = { 'Identifier' } },
     ['@variable.builtin'] = { fg = palette.magenta },
     ['@field'] = { fg = palette.cloud },
     ['@property'] = { fg = palette.cloud },
+    ['@symbol'] = { fg = palette.cloud },
 
-    ['@function'] = { fg = palette.teal },
-    ['@function.builtin'] = { fg = palette.fg },
-    ['@function.macro'] = { fg = palette.fg },
+    ['@function'] = { fg = palette.teal, aliases = { 'Function' } },
+    ['@function.builtin'] = { fg = palette.violet },
+    ['@function.macro'] = { fg = palette.fg_2 },
     ['@parameter'] = { fg = palette.fg_2 },
     ['@method'] = { fg = palette.teal },
 
     ['@constructor'] = { fg = palette.fg },
-    ['@conditional'] = { fg = palette.violet },
-    ['@repeat'] = { fg = palette.violet },
-    ['@label'] = { fg = palette.fg },
-    ['@operator'] = { fg = palette.fg_1 },
-    ['@keyword'] = { fg = palette.violet },
-    ['@exception'] = { fg = palette.violet },
+    ['@conditional'] = { fg = palette.violet, aliases = { 'Conditional' } },
+    ['@repeat'] = { fg = palette.violet, aliases = { 'Repeat' } },
+    ['@statement'] = { fg = palette.violet, aliases = { 'Statement' } },
+    ['@label'] = { fg = palette.fg, aliases = { 'Label' } },
+    ['@operator'] = { fg = palette.fg_1, aliases = { 'Operator' } },
+    ['@keyword'] = { fg = palette.violet, aliases = { 'Keyword' } },
+    ['@exception'] = { fg = palette.violet, aliases = { 'Exception' } },
 
-    ['@type'] = { fg = palette.azure },
+    ['@type'] = { fg = palette.azure, aliases = { 'Type' }},
     ['@type.builtin'] = { fg = palette.violet },
-    ['@type.definition'] = { fg = palette.fg },
-    ['@structure'] = { fg = palette.azure, aliases = { 'Structure', 'Type' } },
-    ['@storageclass'] = { fg = palette.fg },
+    ['@type.definition'] = { fg = palette.fg, aliases = { 'Typedef' } },
+    ['@structure'] = { fg = palette.azure, aliases = { 'Structure' } },
+    ['@storageclass'] = { fg = palette.fg, aliases = { 'StorageClass' } },
 
     ['@namespace'] = { fg = palette.blue },
 
-    ['@tag'] = { fg = palette.fg },
+    ['@tag'] = { fg = palette.violet, aliases = { 'Tag' } },
+    ['@tag.delimiter'] = { fg = palette.fg_2,  aliases = { 'TagDelimiter', 'Delimiter' } },
 }
 
 highlights.plugins.lsp = {
