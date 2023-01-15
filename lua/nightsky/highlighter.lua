@@ -96,7 +96,7 @@ highlights.syntax = {
     ['@text.literal'] = { fg = palette.fg },
     ['@text.reference'] = { fg = palette.fg },
     ['@text.title'] = { fg = palette.fg, aliases = { 'Title' } },
-    ['@text.uri'] = { fg = palette.azure },
+    ['@text.uri'] = { fg = palette.azure, fmt = 'underline' },
     ['@text.underline'] = { fg = palette.fg },
     ['@text.todo'] = { fg = palette.fg, aliases = { 'Todo' } },
 
@@ -105,7 +105,7 @@ highlights.syntax = {
     ['@annotation'] = { fg = palette.fg_2 },
     ['@attribute'] = { fg = palette.fg_2 },
 
-    ['@punctuation'] = { fg = palette.fg },
+    ['@punctuation'] = { fg = palette.fg_2 },
     ['@constant'] = { fg = palette.lily, aliases = { 'Constant' } },
     ['@constant.builtin'] = { fg = palette.fg },
     ['@constant.macro'] = { fg = palette.fg },
@@ -132,10 +132,12 @@ highlights.syntax = {
     ['@symbol'] = { fg = palette.cloud },
 
     ['@function'] = { fg = palette.teal, aliases = { 'Function' } },
+    ['@function.call'] = { fg = palette.teal },
     ['@function.builtin'] = { fg = palette.violet },
     ['@function.macro'] = { fg = palette.fg_2 },
     ['@parameter'] = { fg = palette.fg_2 },
     ['@method'] = { fg = palette.teal },
+    ['@method.call'] = { fg = palette.teal },
 
     ['@constructor'] = { fg = palette.fg },
     ['@conditional'] = { fg = palette.violet, aliases = { 'Conditional' } },
@@ -147,15 +149,17 @@ highlights.syntax = {
     ['@exception'] = { fg = palette.violet, aliases = { 'Exception' } },
 
     ['@type'] = { fg = palette.azure, aliases = { 'Type' }},
+    ['@type.definition'] = { fg = palette.violet, aliases = { 'Typedef' } },
     ['@type.builtin'] = { fg = palette.violet },
-    ['@type.definition'] = { fg = palette.fg, aliases = { 'Typedef' } },
-    ['@structure'] = { fg = palette.azure, aliases = { 'Structure' } },
-    ['@storageclass'] = { fg = palette.fg, aliases = { 'StorageClass' } },
+    ['@type.qualifier'] = { fg = palette.violet },
+    ['@structure'] = { fg = palette.azure, fmt = 'bold', aliases = { 'Structure' } },
+    ['@storageclass'] = { fg = palette.violet, aliases = { 'StorageClass' } },
 
     ['@namespace'] = { fg = palette.blue },
 
-    ['@tag'] = { fg = palette.violet, aliases = { 'Tag' } },
+    ['@tag'] = { fg = palette.red, aliases = { 'Tag' } },
     ['@tag.delimiter'] = { fg = palette.fg_2,  aliases = { 'TagDelimiter', 'Delimiter' } },
+    ['@tag.attribute'] = { fg = palette.yellow },
 }
 
 highlights.plugins.lsp = {

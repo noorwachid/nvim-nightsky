@@ -25,8 +25,8 @@ local M = {
     bg_diff_delete = '#330000',
 
     red = '#ef5a5c',
-    orange = '#ef8830',
-    brown = '#cf9830',
+    orange = '#ef7820',
+    brown = '#df8840',
     yellow = '#efcf80',
     chartreuse = '#98cf90',
     green = '#32ee30',
