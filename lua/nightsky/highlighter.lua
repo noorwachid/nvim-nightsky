@@ -2,7 +2,8 @@ local palette = require('nightsky.palette')
 
 local M = {}
 local highlights = {
-    plugins = {}
+    plugins = {},
+    languages = {},
 }
 
 local function set(new_highlights)
@@ -95,7 +96,7 @@ highlights.editor = {
 highlights.syntax = {
     ['@text.literal'] = { fg = palette.fg },
     ['@text.reference'] = { fg = palette.fg },
-    ['@text.title'] = { fg = palette.fg, aliases = { 'Title' } },
+    ['@text.title'] = { fg = palette.violet, fmt = 'bold', aliases = { 'Title' } },
     ['@text.uri'] = { fg = palette.azure, fmt = 'underline' },
     ['@text.underline'] = { fg = palette.fg },
     ['@text.todo'] = { fg = palette.fg, aliases = { 'Todo' } },
@@ -118,9 +119,9 @@ highlights.syntax = {
 
     ['@string'] = { fg = palette.brown, aliases = { 'String' } },
     ['@string.escape'] = { fg = palette.yellow },
-    ['@string.special'] = { fg = palette.orange, aliases = { 'Special' }  },
+    ['@string.special'] = { fg = palette.orange, aliases = { 'Special' } },
     ['@character'] = { fg = palette.yellow, aliases = { 'Character' } },
-    ['@character.special'] = { fg = palette.red, aliases = { 'SpecialChar'} },
+    ['@character.special'] = { fg = palette.red, aliases = { 'SpecialChar' } },
     ['@boolean'] = { fg = palette.violet, aliases = { 'Boolean' } },
     ['@number'] = { fg = palette.lily, aliases = { 'Number' } },
     ['@float'] = { fg = palette.lily, aliases = { 'Float' } },
@@ -148,7 +149,7 @@ highlights.syntax = {
     ['@keyword'] = { fg = palette.violet, aliases = { 'Keyword' } },
     ['@exception'] = { fg = palette.violet, aliases = { 'Exception' } },
 
-    ['@type'] = { fg = palette.azure, aliases = { 'Type' }},
+    ['@type'] = { fg = palette.azure, aliases = { 'Type' } },
     ['@type.definition'] = { fg = palette.violet, aliases = { 'Typedef' } },
     ['@type.builtin'] = { fg = palette.violet },
     ['@type.qualifier'] = { fg = palette.violet },
@@ -158,7 +159,7 @@ highlights.syntax = {
     ['@namespace'] = { fg = palette.blue },
 
     ['@tag'] = { fg = palette.red, aliases = { 'Tag' } },
-    ['@tag.delimiter'] = { fg = palette.fg_2,  aliases = { 'TagDelimiter', 'Delimiter' } },
+    ['@tag.delimiter'] = { fg = palette.fg_2, aliases = { 'TagDelimiter', 'Delimiter' } },
     ['@tag.attribute'] = { fg = palette.yellow },
 }
 
@@ -243,13 +244,17 @@ highlights.plugins.telescope = {
     TelescopePreviewBorder = { fg = palette.fg_1 },
     TelescopeMatching = { fg = palette.orange, fmt = 'bold' },
     TelescopePromptPrefix = { fg = palette.lily },
-    TelescopeSelection =  { bg = palette.accent },
+    TelescopeSelection = { bg = palette.accent },
     TelescopeSelectionCaret = { bg = palette.accent, fg = palette.fg },
 }
 
 function M.setup()
     set(highlights.editor)
     set(highlights.syntax)
+
+    for _, language_highlights in pairs(highlights.languages) do
+        set(language_highlights)
+    end
 
     for _, plugin_highlights in pairs(highlights.plugins) do
         set(plugin_highlights)
