@@ -21,7 +21,7 @@ local M = {
 
     bg_diff_info = '#515151',
     bg_diff_add = '#003300',
-    bg_diff_change = '#002266',
+    bg_diff_change = '#220066',
     bg_diff_delete = '#330000',
 
     red = '#ef5a5c',

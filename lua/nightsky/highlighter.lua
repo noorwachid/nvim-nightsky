@@ -119,7 +119,7 @@ highlights.syntax = {
 
     ['@string'] = { fg = palette.brown, aliases = { 'String' } },
     ['@string.escape'] = { fg = palette.yellow },
-    ['@string.special'] = { fg = palette.orange, aliases = { 'Special' } },
+    ['@string.special'] = { fg = palette.violet, aliases = { 'Special' } },
     ['@character'] = { fg = palette.yellow, aliases = { 'Character' } },
     ['@character.special'] = { fg = palette.red, aliases = { 'SpecialChar' } },
     ['@boolean'] = { fg = palette.violet, aliases = { 'Boolean' } },
@@ -214,12 +214,15 @@ highlights.plugins.gitsigns = {
     GitSignsAdd = { fg = palette.green },
     GitSignsAddLn = { fg = palette.green },
     GitSignsAddNr = { fg = palette.green },
-    GitSignsChange = { fg = palette.blue },
-    GitSignsChangeLn = { fg = palette.blue },
-    GitSignsChangeNr = { fg = palette.blue },
+    GitSignsChange = { fg = palette.violet },
+    GitSignsChangeLn = { fg = palette.violet },
+    GitSignsChangeNr = { fg = palette.violet },
     GitSignsDelete = { fg = palette.red },
     GitSignsDeleteLn = { fg = palette.red },
-    GitSignsDeleteNr = { fg = palette.red }
+    GitSignsDeleteNr = { fg = palette.red },
+    GitSignsUntracked = { fg = palette.yellow },
+    GitSignsUntrackedLn = { fg = palette.yellow },
+    GitSignsUntrackedNr = { fg = palette.yellow }
 }
 
 highlights.plugins.nvim_tree = {
@@ -227,7 +230,7 @@ highlights.plugins.nvim_tree = {
     NvimTreeVertSplit = { fg = palette.bg_2, bg = palette.bg },
     NvimTreeEndOfBuffer = { fg = palette.bg_2, bg = palette.bg },
     NvimTreeRootFolder = { fg = palette.brown, fmt = 'bold' },
-    NvimTreeGitDirty = { fg = palette.blue },
+    NvimTreeGitDirty = { fg = palette.violet },
     NvimTreeGitNew = { fg = palette.green },
     NvimTreeGitDeleted = { fg = palette.red },
     NvimTreeSpecialFile = { fg = palette.yellow, fmt = 'underline' },
