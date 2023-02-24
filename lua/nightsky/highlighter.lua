@@ -6,13 +6,15 @@ local highlights = {
     languages = {},
 }
 
-local function set(new_highlights)
+local function set(new_highlights, default_highlights)
     for group, options in pairs(new_highlights) do
+		local default_options = default_highlights[group] or {}
+
         local attributes_command = string.format('guifg=%s guibg=%s guisp=%s gui=%s',
-            options.fg or 'none',
-            options.bg or 'none',
-            options.sp or 'none',
-            options.fmt or 'none'
+            default_options.fg or options.fg or 'none',
+            default_options.bg or options.bg or 'none',
+            default_options.sp or options.sp or 'none',
+            default_options.fmt or options.fmt or 'none'
         )
 
         vim.api.nvim_command('hi ' .. group .. ' ' .. attributes_command)
@@ -251,16 +253,19 @@ highlights.plugins.telescope = {
     TelescopeSelectionCaret = { bg = palette.accent, fg = palette.fg },
 }
 
-function M.setup()
-    set(highlights.editor)
-    set(highlights.syntax)
+function M.setup(options)
+
+	local default_highlights = options.highlights or {}
+
+    set(highlights.editor, default_highlights)
+    set(highlights.syntax, default_highlights)
 
     for _, language_highlights in pairs(highlights.languages) do
-        set(language_highlights)
+        set(language_highlights, default_highlights)
     end
 
     for _, plugin_highlights in pairs(highlights.plugins) do
-        set(plugin_highlights)
+        set(plugin_highlights, default_highlights)
     end
 end
 

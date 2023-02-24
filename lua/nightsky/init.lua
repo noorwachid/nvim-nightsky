@@ -1,10 +1,12 @@
 local M = {}
 
-function M.setup()
+function M.setup(options)
+	options = options or {}
+
     vim.cmd('hi clear')
     vim.cmd('syntax reset')
 
-    require('nightsky.highlighter').setup()
+    require('nightsky.highlighter').setup(options)
     -- require('midnightstar.terminal').setup()
 end
 
