@@ -64,7 +64,7 @@ highlights.editor = {
     Substitute = { fg = palette.bg, bg = palette.green },
     MatchParen = { fg = palette.yellow, fmt = 'bold' },
     NonText = { fg = palette.gray },
-    Whitespace = { fg = palette.gray },
+    Whitespace = { fg = palette.bg_3 },
     SpecialKey = { fg = palette.gray },
     Pmenu = { fg = palette.fg, bg = palette.bg_2 },
     PmenuSbar = { fg = palette.none, bg = palette.bg_1 },
