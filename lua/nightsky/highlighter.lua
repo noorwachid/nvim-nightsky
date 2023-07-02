@@ -161,7 +161,7 @@ highlights.syntax = {
     ['@namespace'] = { fg = palette.blue },
 
     ['@tag'] = { fg = palette.red, aliases = { 'Tag' } },
-    ['@tag.delimiter'] = { fg = palette.fg_2, aliases = { 'TagDelimiter', 'Delimiter' } },
+    ['@tag.delimiter'] = { fg = palette.fg_3, aliases = { 'TagDelimiter', 'Delimiter' } },
     ['@tag.attribute'] = { fg = palette.yellow },
 }
 
@@ -251,6 +251,12 @@ highlights.plugins.telescope = {
     TelescopePromptPrefix = { fg = palette.lily },
     TelescopeSelection = { bg = palette.accent },
     TelescopeSelectionCaret = { bg = palette.accent, fg = palette.fg },
+}
+
+highlights.languages.html = {
+	htmlH1 = { fg = palette.azure, fmt = 'bold' },
+	htmlH2 = { fg = palette.teal, fmt = 'bold' },
+	htmlH3 = { fg = palette.violet, fmt = 'bold' }
 }
 
 function M.setup(options)
