@@ -173,7 +173,7 @@ Hi('PreCondit', { fg: palette.fg_2 })
 
 Hi('Type', { fg: palette.azure })
 Hi('Typedef', { fg: palette.violet })
-Hi('Structure', { fg: palette.azure, fmt: 'bold' })
+Hi('Structure', { fg: palette.violet })
 Hi('StorageClass', { fg: palette.violet })
 Hi('Tag', { fg: palette.red })
 Hi('TagDelimiter', { fg: palette.fg_2 })
@@ -201,4 +201,9 @@ Hi('htmlH1', { fg: palette.azure, fmt: 'bold' })
 Hi('htmlH2', { fg: palette.teal, fmt: 'bold' })
 Hi('htmlH3', { fg: palette.violet, fmt: 'bold' })
 
+Hi('htmlTag', { fg: palette.fg_2 })
+Hi('htmlTagN', { fg: palette.fg_2 })
+Hi('htmlEndTag', { fg: palette.fg_2 })
+
+Hi('htmlArg', { fg: palette.fg_1 })
 
