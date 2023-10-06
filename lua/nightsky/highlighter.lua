@@ -32,7 +32,7 @@ highlights.editor = {
     Normal = { fg = palette.fg, bg = palette.bg },
     Terminal = { fg = palette.fg, bg = palette.bg },
     EndOfBuffer = { fg = palette.bg or palette.bg, bg = palette.bg },
-    FoldColumn = { fg = palette.fg, bg = palette.bg_1 },
+    FoldColumn = { fg = palette.fg, bg = palette.bg },
     Folded = { fg = palette.fg, bg = palette.bg_1 },
     SignColumn = { fg = palette.fg, bg = palette.bg },
     ToolbarLine = { fg = palette.fg },
@@ -254,8 +254,8 @@ highlights.plugins.telescope = {
 }
 
 highlights.languages.html = {
-	htmlH1 = { fg = palette.azure, fmt = 'bold' },
-	htmlH2 = { fg = palette.teal, fmt = 'bold' },
+	htmlH1 = { fg = palette.teal, fmt = 'bold' },
+	htmlH2 = { fg = palette.azure, fmt = 'bold' },
 	htmlH3 = { fg = palette.violet, fmt = 'bold' }
 }
 
