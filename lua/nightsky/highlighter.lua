@@ -46,7 +46,7 @@ highlights.editor = {
     ColorColumn = { bg = palette.bg_1 },
     CursorLineNr = { fg = palette.fg, fmt = 'bold' },
     LineNr = { fg = palette.gray },
-    Conceal = { fg = palette.gray, bg = palette.bg_1 },
+    Conceal = { fg = palette.gray, bg = palette.bg },
     DiffAdd = { fg = palette.none, bg = palette.bg_diff_add },
     DiffChange = { fg = palette.none, bg = palette.bg_diff_change },
     DiffDelete = { fg = palette.none, bg = palette.bg_diff_delete },
@@ -103,10 +103,27 @@ highlights.syntax = {
     ['@text.underline'] = { fg = palette.fg },
     ['@text.todo'] = { fg = palette.fg, aliases = { 'Todo' } },
 
+	['@markup.heading'] = { fg = palette.violet, fmt = 'bold' },
+	['@markup.heading.1'] = { fg = palette.teal, fmt = 'bold' },
+	['@markup.heading.2'] = { fg = palette.azure, fmt = 'bold' },
+	['@markup.heading.3'] = { fg = palette.violet, fmt = 'bold' },
+
+	['@markup.link.label'] = { fg = palette.brown },
+	['@markup.link.url'] = { fg = palette.blue, fmt = 'underline' },
+
+	['@markup.strong'] = { fg = palette.fg, fmt = 'bold' },
+	['@markup.italic'] = { fg = palette.fg, fmt = 'italic' },
+
+	['@markup.raw'] = { bg = palette.bg_2, fg = palette.lily },
+	['@markup.raw.line'] = { bg = palette.bg_2, fg = palette.lily },
+	['@markup.raw.operator'] = { bg = palette.bg_2, fg = palette.fg_5 },
+
+	['@markup.raw.block'] = { fg = palette.brown },
+
     ['@error'] = { fg = palette.fg, aliases = { 'Error' } },
     ['@comment'] = { fg = palette.fg_4, fmt = 'italic', aliases = { 'Comment', 'SpecialComment' } },
     ['@annotation'] = { fg = palette.fg_2 },
-    ['@attribute'] = { fg = palette.fg_2 },
+    ['@attribute'] = { fg = palette.fg_2, aliases = { 'Attribute' } },
 
     ['@punctuation'] = { fg = palette.fg_2 },
     ['@constant'] = { fg = palette.lily, aliases = { 'Constant' } },
