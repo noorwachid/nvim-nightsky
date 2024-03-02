@@ -116,9 +116,9 @@ highlights.syntax = {
 
 	['@markup.raw'] = { bg = palette.bg_1, fg = palette.lily },
 	['@markup.raw.line'] = { bg = palette.bg_1, fg = palette.lily },
-	['@markup.raw.operator'] = { bg = palette.bg_2, fg = palette.fg_5 },
+	['@markup.raw.operator'] = { bg = palette.bg_1, fg = palette.fg_5 },
 
-	['@markup.raw.block'] = { fg = palette.brown },
+	['@markup.raw.block'] = { fg = palette.lily },
 
     ['@error'] = { fg = palette.fg, aliases = { 'Error' } },
     ['@comment'] = { fg = palette.fg_4, fmt = 'italic', aliases = { 'Comment', 'SpecialComment' } },
