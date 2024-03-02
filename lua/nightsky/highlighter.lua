@@ -114,8 +114,8 @@ highlights.syntax = {
 	['@markup.strong'] = { fg = palette.fg, fmt = 'bold' },
 	['@markup.italic'] = { fg = palette.fg, fmt = 'italic' },
 
-	['@markup.raw'] = { bg = palette.bg_2, fg = palette.lily },
-	['@markup.raw.line'] = { bg = palette.bg_2, fg = palette.lily },
+	['@markup.raw'] = { bg = palette.bg_1, fg = palette.lily },
+	['@markup.raw.line'] = { bg = palette.bg_1, fg = palette.lily },
 	['@markup.raw.operator'] = { bg = palette.bg_2, fg = palette.fg_5 },
 
 	['@markup.raw.block'] = { fg = palette.brown },
