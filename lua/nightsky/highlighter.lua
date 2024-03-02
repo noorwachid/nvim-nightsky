@@ -109,7 +109,7 @@ highlights.syntax = {
 	['@markup.heading.3'] = { fg = palette.violet, fmt = 'bold' },
 
 	['@markup.link.label'] = { fg = palette.brown },
-	['@markup.link.url'] = { fg = palette.blue, fmt = 'underline' },
+	['@markup.link.url'] = { fg = palette.blue },
 
 	['@markup.strong'] = { fg = palette.fg, fmt = 'bold' },
 	['@markup.italic'] = { fg = palette.fg, fmt = 'italic' },
