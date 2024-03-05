@@ -96,6 +96,10 @@ highlights.editor = {
 }
 
 highlights.syntax = {
+	['@diff.plus'] = { fg = palette.green },
+	['@diff.minus'] = { fg = palette.red },
+	['@diff.delta'] = { fg = palette.violet },
+
     ['@text.literal'] = { fg = palette.fg },
     ['@text.reference'] = { fg = palette.fg },
     ['@text.title'] = { fg = palette.violet, fmt = 'bold', aliases = { 'Title' } },
@@ -107,6 +111,9 @@ highlights.syntax = {
 	['@markup.heading.1'] = { fg = palette.teal, fmt = 'bold' },
 	['@markup.heading.2'] = { fg = palette.azure, fmt = 'bold' },
 	['@markup.heading.3'] = { fg = palette.violet, fmt = 'bold' },
+
+	['@markup.list.checked'] = { fg = palette.green },
+	['@markup.list.unchecked'] = { fg = palette.fg_2 },
 
 	['@markup.link.label'] = { fg = palette.brown },
 	['@markup.link.url'] = { fg = palette.blue },
