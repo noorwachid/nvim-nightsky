@@ -60,7 +60,7 @@ highlights.editor = {
     WarningMsg = { fg = palette.yellow, fmt = 'bold' },
     MoreMsg = { fg = palette.blue, fmt = 'bold' },
     IncSearch = { fg = palette.bg, bg = palette.orange },
-    Search = { fg = palette.bg, bg = palette.accent_darker },
+    Search = { fg = palette.fg, bg = palette.accent_darker },
     Substitute = { fg = palette.bg, bg = palette.green },
     MatchParen = { fg = palette.yellow, fmt = 'bold' },
     NonText = { fg = palette.gray },
