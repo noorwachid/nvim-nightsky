@@ -143,7 +143,7 @@ highlights.syntax = {
 
     ['@string'] = { fg = palette.brown, aliases = { 'String' } },
     ['@string.escape'] = { fg = palette.yellow },
-    ['@string.special'] = { fg = palette.violet, aliases = { 'Special' } },
+    ['@string.special'] = { fg = palette.yellow, aliases = { 'Special' } },
     ['@character'] = { fg = palette.yellow, aliases = { 'Character' } },
     ['@character.special'] = { fg = palette.red, aliases = { 'SpecialChar' } },
     ['@boolean'] = { fg = palette.violet, aliases = { 'Boolean' } },
