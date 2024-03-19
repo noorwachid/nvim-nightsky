@@ -8,23 +8,23 @@ local highlights = {
 
 local function set(new_highlights, default_highlights)
     for group, options in pairs(new_highlights) do
-		local default_options = default_highlights[group] or {}
+	local default_options = default_highlights[group] or {}
 
-        local attributes_command = string.format('guifg=%s guibg=%s guisp=%s gui=%s',
-            default_options.fg or options.fg or 'none',
-            default_options.bg or options.bg or 'none',
-            default_options.sp or options.sp or 'none',
-            default_options.fmt or options.fmt or 'none'
-        )
+	local attributes_command = string.format('guifg=%s guibg=%s guisp=%s gui=%s',
+	    default_options.fg or options.fg or 'none',
+	    default_options.bg or options.bg or 'none',
+	    default_options.sp or options.sp or 'none',
+	    default_options.fmt or options.fmt or 'none'
+	)
 
-        vim.api.nvim_command('hi ' .. group .. ' ' .. attributes_command)
+	vim.api.nvim_command('hi ' .. group .. ' ' .. attributes_command)
 
-        -- For syntax fallback in case there is no treesitter parser
-        if options.aliases then
-            for _, alias in pairs(options.aliases) do
-                vim.api.nvim_command('hi ' .. alias .. ' ' .. attributes_command)
-            end
-        end
+	-- For syntax fallback in case there is no treesitter parser
+	if options.aliases then
+	    for _, alias in pairs(options.aliases) do
+		vim.api.nvim_command('hi ' .. alias .. ' ' .. attributes_command)
+	    end
+	end
     end
 end
 
@@ -96,9 +96,9 @@ highlights.editor = {
 }
 
 highlights.syntax = {
-	['@diff.plus'] = { fg = palette.green },
-	['@diff.minus'] = { fg = palette.red },
-	['@diff.delta'] = { fg = palette.violet },
+    ['@diff.plus'] = { fg = palette.green, bg = palette.bg_diff_add },
+    ['@diff.minus'] = { fg = palette.red, bg = palette.bg_diff_delete },
+    ['@diff.delta'] = { fg = palette.violet, bg = palette.bg_diff_change },
 
     ['@text.literal'] = { fg = palette.fg },
     ['@text.reference'] = { fg = palette.fg },
@@ -107,27 +107,23 @@ highlights.syntax = {
     ['@text.underline'] = { fg = palette.fg },
     ['@text.todo'] = { fg = palette.fg, aliases = { 'Todo' } },
 
-	['@markup.heading'] = { fg = palette.violet, fmt = 'bold' },
-	['@markup.heading.1'] = { fg = palette.teal, fmt = 'bold' },
-	['@markup.heading.2'] = { fg = palette.azure, fmt = 'bold' },
-	['@markup.heading.3'] = { fg = palette.violet, fmt = 'bold' },
+    ['@markup.heading'] = { fg = palette.violet, fmt = 'bold' },
+    ['@markup.heading.1'] = { fg = palette.teal, fmt = 'bold' },
+    ['@markup.heading.2'] = { fg = palette.azure, fmt = 'bold' },
+    ['@markup.heading.3'] = { fg = palette.violet, fmt = 'bold' },
 
-	['@markup.list.checked'] = { fg = palette.green },
-	['@markup.list.unchecked'] = { fg = palette.fg_2 },
+    ['@markup.list.checked'] = { fg = palette.green },
 
-	['@markup.link.label'] = { fg = palette.brown },
-	['@markup.link.url'] = { fg = palette.blue },
+    ['@markup.link.label'] = { fg = palette.brown },
+    ['@markup.link.url'] = { fg = palette.blue },
 
-	['@markup.strong'] = { fg = palette.fg, fmt = 'bold' },
-	['@markup.italic'] = { fg = palette.fg, fmt = 'italic' },
+    ['@markup.strong'] = { fg = palette.fg, fmt = 'bold' },
+    ['@markup.italic'] = { fg = palette.fg, fmt = 'italic' },
 
-	['@markup.quote'] = { fmt = 'italic' },
+    ['@markup.quote'] = { fmt = 'italic' },
 
-	['@markup.raw'] = { bg = palette.bg_1, fg = palette.lily },
-	['@markup.raw.line'] = { bg = palette.bg_1, fg = palette.lily },
-	['@markup.raw.operator'] = { bg = palette.bg_1, fg = palette.fg_5 },
-
-	['@markup.raw.block'] = { fg = palette.lily },
+    ['@markup.raw'] = { bg = palette.bg_1, fg = palette.lily },
+    ['@markup.raw.block'] = { fg = palette.lily },
 
     ['@error'] = { fg = palette.fg, aliases = { 'Error' } },
     ['@comment'] = { fg = palette.fg_4, fmt = 'italic', aliases = { 'Comment', 'SpecialComment' } },
@@ -280,24 +276,24 @@ highlights.plugins.telescope = {
 }
 
 highlights.languages.html = {
-	htmlH1 = { fg = palette.teal, fmt = 'bold' },
-	htmlH2 = { fg = palette.azure, fmt = 'bold' },
-	htmlH3 = { fg = palette.violet, fmt = 'bold' }
+    htmlH1 = { fg = palette.teal, fmt = 'bold' },
+    htmlH2 = { fg = palette.azure, fmt = 'bold' },
+    htmlH3 = { fg = palette.violet, fmt = 'bold' }
 }
 
 function M.setup(options)
 
-	local default_highlights = options.highlights or {}
+    local default_highlights = options.highlights or {}
 
     set(highlights.editor, default_highlights)
     set(highlights.syntax, default_highlights)
 
     for _, language_highlights in pairs(highlights.languages) do
-        set(language_highlights, default_highlights)
+	set(language_highlights, default_highlights)
     end
 
     for _, plugin_highlights in pairs(highlights.plugins) do
-        set(plugin_highlights, default_highlights)
+	set(plugin_highlights, default_highlights)
     end
 end
 
