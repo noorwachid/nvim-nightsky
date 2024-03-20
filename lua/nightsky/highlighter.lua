@@ -47,10 +47,10 @@ highlights.editor = {
     CursorLineNr = { fg = palette.fg, fmt = 'bold' },
     LineNr = { fg = palette.gray },
     Conceal = { fg = palette.gray, bg = palette.bg },
-    DiffAdd = { fg = palette.none, bg = palette.bg_diff_add },
-    DiffChange = { fg = palette.none, bg = palette.bg_diff_change },
-    DiffDelete = { fg = palette.none, bg = palette.bg_diff_delete },
-    DiffText = { fg = palette.none, bg = palette.bg_diff_info },
+    DiffAdd = { fg = palette.green, bg = palette.bg_diff_add },
+    DiffChange = { fg = palette.violet, bg = palette.bg_diff_change },
+    DiffDelete = { fg = palette.red, bg = palette.bg_diff_delete },
+    DiffText = { fg = palette.fg, bg = palette.bg_diff_info },
     DiffAdded = { fg = palette.green },
     DiffRemoved = { fg = palette.red },
     DiffFile = { fg = palette.cyan },
@@ -232,6 +232,19 @@ highlights.plugins.cmp = {
     CmpItemAbbrMatchFuzzy = { fg = palette.azure, fmt = 'underline' },
     CmpItemMenu = { fg = palette.fg_5 },
     CmpItemKind = { fg = palette.violet },
+}
+
+highlights.plugins.neogit = {
+        NeogitDiffAdd = { fg = palette.green, bg = palette.bg_diff_add },
+        NeogitDiffAddHighlight = { fg = palette.green, bg = palette.bg_diff_add },
+        NeogitDiffContex = { fg = palette.fg, bg = palette.bg },
+        NeogitDiffContextHighlight = { fg = palette.fg, bg = palette.bg },
+        NeogitDiffDelete = { fg = palette.red, bg = palette.bg_diff_delete },
+        NeogitDiffDeleteHighlight = { fg = palette.red, bg = palette.bg_diff_delete },
+        -- NeogitDiffHeader = { fg = c.vscSplitLight, bg = c.vscBack },
+        -- NeogitDiffHeaderHighlight = { fg = c.vscSplitLight, bg = c.vscBack },
+        -- NeogitHunkHeader = { fg = c.vscGitModified, bg = c.vscLeftDark },
+        -- NeogitHunkHeaderHighlight = { fg = c.vscGitModified, bg = c.vscLeftMid },
 }
 
 highlights.plugins.gitsigns = {

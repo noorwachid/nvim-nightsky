@@ -20,7 +20,7 @@ local M = {
     bg_5 = '#555555',
 
     bg_diff_info = '#515151',
-    bg_diff_add = '#003300',
+    bg_diff_add = '#002200',
     bg_diff_change = '#220066',
     bg_diff_delete = '#330000',
 
