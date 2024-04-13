@@ -119,6 +119,7 @@ highlights.syntax = {
 
     ['@markup.strong'] = { fg = palette.fg, fmt = 'bold' },
     ['@markup.italic'] = { fg = palette.fg, fmt = 'italic' },
+    ['@markup.underline'] = { fg = palette.fg, fmt = 'underline' },
 
     ['@markup.quote'] = { fmt = 'italic' },
 
