@@ -21,8 +21,8 @@ local M = {
 
     bg_diff_info = '#515151',
     bg_diff_add = '#002200',
-    bg_diff_change = '#220066',
-    bg_diff_delete = '#330000',
+    bg_diff_change = '#552200',
+    bg_diff_delete = '#440000',
 
     red = '#ef5a5c',
     orange = '#ef7820',

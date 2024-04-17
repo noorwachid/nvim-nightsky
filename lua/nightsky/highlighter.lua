@@ -48,7 +48,7 @@ highlights.editor = {
     LineNr = { fg = palette.gray },
     Conceal = { fg = palette.gray, bg = palette.bg },
     DiffAdd = { fg = palette.green, bg = palette.bg_diff_add },
-    DiffChange = { fg = palette.violet, bg = palette.bg_diff_change },
+    DiffChange = { fg = palette.yellow, bg = palette.bg_diff_change },
     DiffDelete = { fg = palette.red, bg = palette.bg_diff_delete },
     DiffText = { fg = palette.fg, bg = palette.bg_diff_info },
     DiffAdded = { fg = palette.green },
@@ -98,7 +98,7 @@ highlights.editor = {
 highlights.syntax = {
     ['@diff.plus'] = { fg = palette.green, bg = palette.bg_diff_add },
     ['@diff.minus'] = { fg = palette.red, bg = palette.bg_diff_delete },
-    ['@diff.delta'] = { fg = palette.violet, bg = palette.bg_diff_change },
+    ['@diff.delta'] = { fg = palette.yellow, bg = palette.bg_diff_change },
 
     ['@text.literal'] = { fg = palette.fg },
     ['@text.reference'] = { fg = palette.fg },
@@ -111,6 +111,7 @@ highlights.syntax = {
     ['@markup.heading.1'] = { fg = palette.teal, fmt = 'bold' },
     ['@markup.heading.2'] = { fg = palette.azure, fmt = 'bold' },
     ['@markup.heading.3'] = { fg = palette.violet, fmt = 'bold' },
+    ['@markup.heading.4'] = { fg = palette.fg_3, fmt = 'bold' },
 
     ['@markup.list.checked'] = { fg = palette.green },
 
@@ -131,7 +132,7 @@ highlights.syntax = {
     ['@annotation'] = { fg = palette.fg_2 },
     ['@attribute'] = { fg = palette.fg_2, aliases = { 'Attribute' } },
 
-    ['@punctuation'] = { fg = palette.fg_2 },
+    ['@punctuation'] = { fg = palette.fg_3 },
     ['@constant'] = { fg = palette.lily, aliases = { 'Constant' } },
     ['@constant.builtin'] = { fg = palette.fg },
     ['@constant.macro'] = { fg = palette.fg },
