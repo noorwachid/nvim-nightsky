@@ -113,6 +113,9 @@ highlights.syntax = {
     ['@markup.heading.3'] = { fg = palette.violet, fmt = 'bold' },
     ['@markup.heading.4'] = { fg = palette.fg_3, fmt = 'bold' },
 
+    ['@markup.list'] = { fg = palette.azure },
+
+    ['@markup.list.checked'] = { fg = palette.green },
     ['@markup.list.checked'] = { fg = palette.green },
 
     ['@markup.link.label'] = { fg = palette.brown },
